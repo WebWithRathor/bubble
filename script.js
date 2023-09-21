@@ -1,7 +1,7 @@
 var rn = ``
 function bubly() {
   var clutter = ``;
-  for (var i = 0; i <= 150; i++) {
+  for (var i = 0; i <= 118; i++) {
     var valu = Math.floor(Math.random() * 10);
     clutter += `<div class="bubble">${valu}</div>`;
   }

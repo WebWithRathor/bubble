@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: 1vw 1vw 1vw black;
 }
 #top{
     height: 7vw;
@@ -77,6 +78,7 @@ body {
     justify-content: center;
     transition: all ease .3s;
     cursor: pointer;
+    box-shadow: 0vw 0vw .5vw white;
 }
 .bubble:hover{
     background-color: rgba(57, 57, 57, 0.333);
@@ -134,7 +136,6 @@ body {
         height: 5.4vw;
         font-weight: 500;
         font-size: 3vw;
-        box-shadow: 10px 12px 10px beige;
     }
     #gameover{
         width: 60vw;
