@@ -9,33 +9,30 @@ function bubly() {
 }
 function timer() {
   var time = 60;
-    var timers = setInterval(function () {
-  if (time > 0) {
+  var timers = setInterval(function () {
+    if (time > 0) {
       time--;
       document.querySelector(".box #time").textContent = time;
-  } else {
-    clearInterval(timers);
-    gsap.timeline()
-    .to(".bubble",{
-      scale:0,
-      opacity:0
-    })
-    .to("#gameover",{
-      scale:1
-    })
-    document.querySelector("#gameover h2>span").textContent=score
+    } else {
+      clearInterval(timers);
+        gsap.to("#gameover", {
+          scale: 1
+        })
+      document.querySelector("#gameover h2>span").textContent = score
+      document.querySelector("#bottom").innerHTML = ""
 
-  }
-    }, 1000)
+
+    }
+  }, 1000)
 }
 function hit() {
   rn = Math.floor(Math.random() * 10);
   document.querySelector(".box #hit").textContent = rn;
 }
 var score = 0;
-function add(){
+function add() {
   score += 10;
-document.querySelector(".box #score").textContent = score;
+  document.querySelector(".box #score").textContent = score;
 }
 function scoreadd() {
   document.querySelector("#bottom").addEventListener("click", function (dets) {
@@ -49,12 +46,12 @@ function scoreadd() {
 }
 scoreadd();
 hit();
-setTimeout(function(){
+setTimeout(function () {
   bubly();
-timer();
-},500)
+  timer();
+}, 500)
 
 
-document.querySelector("#gameover button").addEventListener("click",function(){
+document.querySelector("#gameover button").addEventListener("click", function () {
   location.reload();
 })
